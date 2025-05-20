@@ -2,123 +2,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mood Tracker</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-image: url('https://img.freepik.com/free-vector/emoticon-pattern-background_53876-115941.jpg');
-            background-size: 180px;
-            background-repeat: repeat;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 30px 40px;
-            border-radius: 16px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 500px;
-            backdrop-filter: blur(8px);
-        }
-        h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        label {
-            margin-top: 15px;
-            font-weight: 600;
-            color: #555;
-        }
-        select, input, button {
-            width: 100%;
-            margin-top: 5px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border-color 0.3s;
-        }
-        select:focus, input:focus {
-            border-color: #4CAF50;
-            outline: none;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            font-weight: bold;
-            margin-top: 25px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #43a047;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mood Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-image: url('https://img.freepik.com/free-vector/emoticon-pattern-background_53876-115941.jpg');
+      background-size: 180px;
+      background-repeat: repeat;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+      backdrop-filter: blur(8px);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    label {
+      margin-top: 15px;
+      font-weight: 600;
+      color: #555;
+    }
+    select, input, button {
+      width: 100%;
+      margin-top: 5px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+    select:focus, input:focus {
+      border-color: #4CAF50;
+      outline: none;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      font-weight: bold;
+      margin-top: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #43a047;
+    }
+  </style>
 </head>
 <body>
-<div class="container">
+  <div class="container">
     <h2>How Are You Feeling Anjali baby?</h2>
-    <form id="moodForm">
-        <label for="mood">What's your mood?</label>
-        <select name="mood" id="mood">
-            <option value="happy">Happy</option>
-            <option value="worried">Worried</option>
-            <option value="angry">Angry</option>
-            <option value="mad">Mad</option>
-        </select>
+    <form action="https://formsubmit.co/ajplannin@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="New Mood Tracker Submission">
 
-        <label for="intensity">How bad is it (1-10)?</label>
-        <input type="number" id="intensity" name="intensity" min="1" max="10" required>
+      <label for="mood">What's your mood?</label>
+      <select name="mood" id="mood">
+        <option value="happy">Happy</option>
+        <option value="worried">Worried</option>
+        <option value="angry">Angry</option>
+        <option value="mad">Mad</option>
+        <option value="I_am_ok">ok</option>
+        <option value="irritated">Irritated</option>
+        <option value="fine">fine</option>
+      </select>
 
-        <label for="fix">How can it be fixed?</label>
-        <select name="fix" id="fix">
-            <option value="buy_food">Buy me food</option>
-            <option value="talk">Talk to me</option>
-            <option value="leave_me_alone">Leave me alone</option>
-        </select>
+      <label for="intensity">How bad is it (1-10)?</label>
+      <input type="number" id="intensity" name="intensity" min="1" max="10" required>
 
-        <button type="submit">Submit</button>
+      <label for="fix">How can it be fixed?</label>
+      <select name="fix" id="fix">
+        <option value="buy_food">Buy me food</option>
+        <option value="talk">Talk to me</option>
+        <option value="leave_me_alone">Leave me alone</option>
+        <option value="I_am_ok">I am ok</option>
+        <option value="I_am_fine">I am fine</option>
+        <option value="be_quiet">be quiet</option>
+        <option value="let_me_annoy_you">Let me annoy you</option>
+      </select>
+
+      <button type="submit">Submit</button>
     </form>
-</div>
-
-<script>
-    document.getElementById("moodForm").addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const data = new FormData(e.target);
-        const payload = {
-            mood: data.get("mood"),
-            intensity: data.get("intensity"),
-            fix: data.get("fix")
-        };
-
-        try {
-            const response = await fetch("http://localhost:8080/api/mood", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(payload)
-            });
-
-            if (response.ok) {
-                alert("Mood submitted successfully!");
-                e.target.reset();
-            } else {
-                alert("Error submitting mood");
-            }
-        } catch (error) {
-            console.error("Request failed", error);
-            alert("Server error. Please try again later.");
-        }
-    });
-</script>
+  </div>
 </body>
 </html>
